@@ -1,0 +1,100 @@
+
+
+.concept {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  background: linear-gradient(to bottom, $color1 0%, $color1 40%, $color2 40%, $color2 100%);
+  @include tab {
+  background: linear-gradient(to bottom, $color1 0%, $color1 40%, $color2 40%, $color2 100%);
+  }
+  @include sp {
+  background: linear-gradient(to bottom, $color1 0%, $color1 25%, $color2 25%, $color2 100%);
+  }
+  
+  .title {
+    font-size: 18px;
+    color: $color3;
+    font-family: "Roboto";
+    position: relative;
+    display: inline-block;
+  }
+  
+}
+
+
+.title:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: black;
+}
+
+.title:after {
+  right: -75px;
+}
+.concept-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto 0;
+  @include tab {
+    flex-direction: column;
+    margin: 50px 0 0;
+  }
+  .concept-copy {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-family: 'Noto Serif JP', serif;
+    letter-spacing: 0.5em;
+    max-width: 477px;
+    @include tab {
+      font-size: 18px;
+    }
+  }
+  .concept-text {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-family: 'Noto Serif JP', serif;
+    width: 45%;
+    @include tab {
+      font-size: 16px;
+      width: 100%;
+      margin-top: 18px;
+    }
+  }
+
+}
+
+.concept-img {
+  display: flex;
+  justify-content: space-between;
+  height: 413px;
+  z-index: 1;
+  margin-top: 11px;
+  @include tab {
+    height: 200px;
+    margin-top: 50px;
+  }
+  .concept-img-1 {
+    background-image: url(../img/img2.png);
+    background-size: cover;
+    width: 65%;
+    @include sp {
+      width: 50%;
+      background-position: 75%, 50%;
+    }
+  }
+  .concept-img-2 {
+    background-image: url(../img/img3.png);
+    background-size: cover;
+    width: 35%;
+    margin-left: 11px;
+    @include sp {
+      width: 50%;
+    }
+  }
+}

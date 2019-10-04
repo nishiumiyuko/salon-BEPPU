@@ -1,0 +1,110 @@
+.access p, .access-sp p {
+    font-family: "Roboto Mono for Powerline";
+    color: white;
+}
+
+.access {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 27.6%, $color2 27.6%, $color2 90%, #ffffff 90%, #ffffff 100%);
+    position: relative;
+    @include sp {
+        background: none;
+        display: none;
+    }
+    
+}
+.access-sp {
+    display: none;
+    @include sp {
+        display: flex;
+        
+    }
+    .inner {
+        @include sp {
+            width: 100%;
+            padding: 0;
+
+        }
+    }
+    
+    .access-title {
+        @include sp {
+            width: 97%;
+            font-size: 18px;
+            color: $color3;
+            font-family: "Roboto";
+            position: relative;
+            display: flex;
+            margin-left: auto;
+        }
+    }
+    .access-title:after {
+        @include sp {
+            left: 80px;
+        }
+    }    
+    .map {
+        position: static;
+        margin-top: 50px;
+    }
+    .access-content {
+        @include sp {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // position: absolute;
+        }
+            
+    }
+}
+
+.access-content-info {
+    width: 30%;
+    @include sp {
+        background-color: #D0C5BA;
+        width: 100%;
+    }
+    .access-shop {
+        color: $color4;
+        font-size: 24px;
+        margin-top: 100px;
+    }
+    .access-text, .access-tel, .access-time, .access-offday {
+        font-size: 16px;
+        margin-top: 23px;
+    }
+    .access-offday {
+        margin-bottom: 100px;
+    }
+}
+.access-content-info > * {
+    @include sp {
+        width: 93%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.map {
+    width: 65%;
+    height: 420px;
+    position: absolute;
+    left: 35%;
+    bottom: 10%;
+    @include sp {
+        width: 100%;
+        height: 230px;
+        // position: absolute;
+        // left: 0;
+        // top: 11%;
+        // margin-top: 50px;
+    }
+    .access-map {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+}
+
+
+
